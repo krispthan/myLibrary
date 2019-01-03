@@ -42,4 +42,20 @@ var array = [1,2,3,4,5];
         console.log("number array at j", array[j]);
     }
 
-
+//Create a timer 
+function startTimer(){
+    var sec=60;
+    timer=setTimer(function(){
+        $('timer').text(sec);
+        sec--;
+        if(sec===0){
+            stopTimer();
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+//stop Timer
+function stopTimer(){
+    $('timer').text('OO');
+    clearInterval(timer);
+}
