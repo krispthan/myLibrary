@@ -101,3 +101,22 @@ function bubbleSort(arr){
         if(doNotSwap) break;  
     } 
 }
+
+// Reverse Array 
+var sentence = "Howdy, how are you?"
+function reverseStringInArray (string){
+  var returnString = "";
+//     for(var i=0; i<string.length; i++){
+      var splitString= string.split(" ");
+//     }
+    for(var j=0; j<splitString.length;j++){
+      var currentIndex= splitString[j];
+      var splitWord= currentIndex.split("");
+      var reverseString = splitWord.reverse();
+      splitString[j] = reverseString.join(""); 
+    }
+    splitString = splitString.join(" ");
+   return splitString;
+  }
+
+  reverseStringInArray(sentence);
